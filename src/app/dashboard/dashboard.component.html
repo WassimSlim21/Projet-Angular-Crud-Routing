@@ -1,0 +1,113 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+  <div class="container-fluid">
+
+    <!-- Brand -->
+    <a class="navbar-brand waves-effect" href="#" target="_blank">
+      <strong class="blue-text">Crud-Routing Angular Project</strong>
+    </a>
+
+    <!-- Collapse -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- Left -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link waves-effect" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['crud']" routerLinkActive="active">Registre</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<div class="sidebar-fixed position-fixed">
+
+  <a class="logo-wrapper waves-effect">
+    <strong>Test Crud/rooting</strong>
+  </a>
+
+  <div class="list-group list-group-flush">
+    <a class="list-group-item list-group-item-action waves-effect" [routerLink]="['crud']" routerLinkActive="active">
+      <i class="fas fa-user mr-3"></i>
+      Add
+    </a>
+    <a class="list-group-item list-group-item-action waves-effect" [routerLink]="['users']" routerLinkActive="active">
+      <i class="fas fa-user mr-3"></i>
+      List
+    </a>
+   
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- <nav class="col-md-2 d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['./']" routerLinkActive="active">
+              <span data-feather="home"></span>
+              Dashboard <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['crud']" routerLinkActive="active">
+              <span data-feather="file"></span>
+              Add
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['users']" routerLinkActive="active">
+              <span data-feather="users"></span>
+              List
+            </a>
+          </li>
+        </ul>    
+      </div>
+    </nav> -->
+
+
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="pt-3 pb-2 mb-3">
+        <h1 class="h2">Dashboard</h1>
+        <router-outlet></router-outlet>
+      </div>  
+    </main>
+  </div>
+</div>
